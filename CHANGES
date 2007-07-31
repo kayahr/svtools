@@ -1,0 +1,13 @@
+Since version 0.3
+-----------------
+  - Splitted echo -e commands to multiple echos to be compatible to dash
+  
+Since version 0.2
+-----------------
+
+  - Default service directory is now /etc/sv/<service>
+  - Default log directory is now /var/log/sv/<service>
+  - Service user is now only deleted if -d option is specified
+  - Log user is now only deleted if -D option is specified
+  - Default run file uses setuidgid now instead of envuidgid
+  - Service directory is now owned by root, not by the service user.
