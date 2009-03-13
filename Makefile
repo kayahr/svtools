@@ -12,31 +12,31 @@ man: svdir.1 mltail.1 mlcat.1 mlhead.1 mltac.1 svsetup.1 svinitd.1 svinfo.1 \
      svinitd-create.1
 
 svdir.1: svdir
-	help2man -N ./svdir > svdir.1
+	help2man -n "Find daemontools service directory" -N ./svdir > svdir.1
 	
 mltail.1: mltail
-	help2man -N ./mltail > mltail.1
+	help2man -n "tail frontend for multilog files" -N ./mltail > mltail.1
 	
 mlcat.1: mlcat
-	help2man -N ./mlcat > mlcat.1
+	help2man -n "cat frontend for multilog files" -N ./mlcat > mlcat.1
 	
 mlhead.1: mlhead
-	help2man -N ./mlhead > mlhead.1
+	help2man -n "head frontend for multilog files" -N ./mlhead > mlhead.1
 	
 mltac.1: mltac
-	help2man -N ./mltac > mltac.1
+	help2man -n "tac frontend for multilog files" -N ./mltac > mltac.1
 	
 svsetup.1: svsetup
-	help2man -N ./svsetup > svsetup.1
+	help2man -n "Service setup tool for daemontools" -N ./svsetup > svsetup.1
 	
 svinitd.1: svinitd
-	help2man -N ./svinitd > svinitd.1
+	help2man -n "init.d wrapper for daemontools services" -N ./svinitd > svinitd.1
 	
 svinitd-create.1: svinitd-create
-	help2man -N ./svinitd-create > svinitd-create.1
+	help2man -n "Create an init.d-script for a supervised process" -N ./svinitd-create > svinitd-create.1
 	
 svinfo.1: svinfo
-	help2man -N ./svinfo > svinfo.1
+	help2man -n "Get infos about a supervised process" -N ./svinfo > svinfo.1
 	
 install: all
 	mkdir -p $(DESTDIR)$(BINDIR)
