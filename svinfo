@@ -26,7 +26,7 @@ showHelp() {
   echo "  -h, --help     Display help and exit"
   echo "  -V, --version  Display version and exit"
   echo ""
-  echo "With this utility you can gather some informations about a"
+  echo "With this utility you can gather some information about a"
   echo "supervised process. If no parameters are specified this utility"
   echo "prints the status output from svstat."
   echo ""
