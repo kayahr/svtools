@@ -1,7 +1,7 @@
 PREFIX=/usr/local
 BINDIR=$(PREFIX)/bin
 SBINDIR=$(PREFIX)/sbin
-MANDIR=$(PREFIX)/man
+MANDIR=$(PREFIX)/share/man
 
 TITLE=svtools
 VERSION=0.6
