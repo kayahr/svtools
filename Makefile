@@ -91,9 +91,9 @@ uninstall:
 dist: clean
 	mkdir $(TITLE)-$(VERSION)
 	find * -not -regex ".*CVS.*" -and -not -regex ".*$(TITLE)-$(VERSION).*" -exec cp -f {} $(TITLE)-$(VERSION)/{} \;
-	tar cfz $(TITLE)-$(VERSION).tar.gz $(TITLE)-$(VERSION)
+	tar cfj $(TITLE)-$(VERSION).tar.bz2 $(TITLE)-$(VERSION)
 	rm -rf $(TITLE)-$(VERSION)
 
 clean:
 	rm -f *.1
-	rm -f $(TITLE)-$(VERSION).tar.gz
+	rm -f $(TITLE)-$(VERSION).tar.bz2
