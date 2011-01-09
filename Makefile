@@ -4,7 +4,7 @@ SBINDIR=$(PREFIX)/sbin
 MANDIR=$(PREFIX)/man
 
 TITLE=svtools
-VERSION=0.4
+VERSION=0.6
 
 all: man
 

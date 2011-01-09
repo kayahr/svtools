@@ -41,7 +41,7 @@ while getopts "fhV-:" NAME
 do
   case "$NAME" in
     f)
-      PARAMS="$PARAMS -fname"
+      PARAMS="$PARAMS --follow=name"
       ;;
     h)
       showHelp
@@ -54,7 +54,7 @@ do
     -)
       case "$OPTARG" in
         follow)
-          PARAMS="$PARAMS -fname"
+          PARAMS="$PARAMS --follow=name"
           ;;
         help)
           showHelp
