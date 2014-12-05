@@ -75,9 +75,11 @@ done
 
 shift `expr $OPTIND - 1`
 
+SERVICE=$1
+
 if [ $# -ne 2 ]
 then
-  showHelp
+  echo "$0 ($SERVICE) {start|stop|reload|restart|force-reload|enable|disable|status}"
   exit 1
 fi
 
@@ -86,8 +88,6 @@ then
   echo "$TITLE: $SVDIR" >&2
   exit 1
 fi
-
-SERVICE=$1
 
 svok $SVDIR/$SERVICE || exit 1
 
@@ -103,6 +103,10 @@ case "$COMMAND" in
     echo -n "Stopping supervised $SERVICE... "
     svc -d $SVDIR/$SERVICE
     echo "Done"
+    ;;
+  status)
+    echo "Status of supervised $SERVICE"
+    svstat $SVDIR/$SERVICE
     ;;
   reload)
     echo -n "Reloading supervised $SERVICE... "
@@ -130,7 +134,7 @@ case "$COMMAND" in
     echo "Done"
     ;;
   *)
-    echo "$0($SERVICE) {start|stop|reload|restart|force-reload|enable|disable}"
+    echo "$0 ($SERVICE) {start|stop|reload|restart|force-reload|enable|disable|status}"
     exit 1
     ;;
 esac
